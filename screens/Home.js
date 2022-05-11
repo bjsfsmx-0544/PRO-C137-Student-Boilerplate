@@ -23,16 +23,16 @@ export default class HomeScreen extends Component {
   }
 
   componentDidMount() {
-    //call getPlanets function here so that the data is fetched as soon as the screen is mounted
+    // Llama a la función getPlanets aquí para que los datos sean recuperados tan pronto como la pantalla se despliegue
   }
 
   getPlanets = () => {
-    //write the codee to fetch the planet data from the API
+    // Escribe el código para recuperar los datos de los planetas de la API
   };
 
 
 
-  /*this function will determine the imagePath state depending on the planetType*/
+  /* Esta función determinarla el estado de imagePath dependiendo de planetType*/
   setDetails = (planetDetails) => {
     const planetType = planetDetails.planet_type;
     let imagePath = "";
@@ -59,7 +59,7 @@ export default class HomeScreen extends Component {
     });
   };
 
-  /*this function will be used in the flatlist. You need to complete this function by observing the data*/
+  /* Esta función se usará en FlatList. Debes completar esta función observando los datos */
   renderItem = ({ item, index }) => {
     this.setDetails(item);
     return (
@@ -86,10 +86,10 @@ export default class HomeScreen extends Component {
     );
   };
 
-  /*this function will be used in the flatlist*/
+  /* Esta función se usará en FlatList */
   keyExtractor = (item, index) => index.toString();
 
-  /*this function will help to select a color for the cards on the flatlist*/
+  /* Esta función ayudará a seleccionar un color para las cartas en la FlatList*/
   selectColor = (index) => {
     var color = ["#fbffd5", "#ffefff", "#ede5ff", "#eafff4"];
     var num = index % 4;
@@ -113,10 +113,10 @@ export default class HomeScreen extends Component {
             style={{ flex: 1, paddingTop: 20 }}
           >
             <View style={styles.upperContainer}>
-              <Text style={styles.headerText}>Planets World</Text>
+              <Text style={styles.headerText}>Mundo de planetas</Text>
             </View>
             <View style={styles.lowerContainer}>
-            {/* make a flatlist below that will display the whole planet list that we have fetched from the API*/}
+            {/* Haz una FlatList debajo para que muestre toda la lista de planetas que hemos recuperado desde la API */}
 
 
 
@@ -134,7 +134,7 @@ export default class HomeScreen extends Component {
           <View
             style={{ alignItems: "center", justifyContent: "center", flex: 1 }}
           >
-            <Text style={styles.headerText}>Loading...</Text>
+            <Text style={styles.headerText}>Cargando...</Text>
           </View>
         </ImageBackground>
       );

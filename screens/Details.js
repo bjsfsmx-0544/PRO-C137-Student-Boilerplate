@@ -14,12 +14,12 @@ export default class DetailsScreen extends Component {
   }
 
   componentDidMount() {
-      //call getDetails function here so that the data is fetched as soon as the screen is mounted
+      // Llama a la función getDetails aquí para que los datos sean recuperados tan pronto como se despliegue la pantalla
   }
   getDetails = () => {
-      //write the codee to fetch the specific planet's data from the API
+      // Escribe el código para recuperar los datos de planetas específicos desde la API
   };
-  /*this function will determine the imagePath state depending on the planetType*/
+  /* Esta función determinará el estado de imagePath dependiendo de planetType*/
   setDetails = (planetDetails) => {
     const planetType = planetDetails.planet_type;
     let imagePath = "";
